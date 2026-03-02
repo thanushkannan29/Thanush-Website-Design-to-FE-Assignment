@@ -485,27 +485,7 @@ section{ padding:80px 0; }
   </div>
 </section>
 
-<script>
-const menuBtn    = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
 
-menuBtn?.addEventListener('click', () => {
-  const visible = mobileMenu.style.display === 'block';
-  mobileMenu.style.display = visible ? 'none' : 'block';
-  mobileMenu.setAttribute('aria-hidden', String(visible));
-});
-
-mobileMenu?.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    mobileMenu.style.display = 'none';
-    mobileMenu.setAttribute('aria-hidden', 'true');
-  });
-});
-
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 600) mobileMenu.style.display = 'none';
-});
-</script>
 </body>
 </html>
 <!--   ====== Site Running at https://thanushkannan29.github.io/Thanush-Website-Design-to-FE-Assignment/   ====== -->
